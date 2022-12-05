@@ -4,7 +4,6 @@ import Location from './components/Location'
 import ResidentCard from './components/ResidentCard'
 import Search from './components/Search'
 import useFetch from './components/hooks/useFetch'
-import { useEffect } from 'react'
 
 function App() {
   const [location, setLocation] = useState()
@@ -16,6 +15,9 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+
+      </div>
       <div className='home-container'>
         <Search
           setLocationInput={setLocationInput}
