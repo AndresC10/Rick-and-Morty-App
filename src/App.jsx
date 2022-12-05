@@ -10,7 +10,6 @@ function App() {
   const [location, setLocation] = useState()
   const [locationInput, setLocationInput] = useState()
   const [hasError, setHasError] = useState(false)
-  const [actualpage, setActualpage] = useState(0)
   const [pageRequested, setPageRequested] = useState(1)
   const [residentsArr, setResidentsArr] = useState([])
   const [pages, setPages] = useState(0)
