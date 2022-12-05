@@ -1,0 +1,15 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #062226;
+    border-radius: 50%;
+    padding: 0;
+    width: 50px;
+    color: white;
+    margin: 0px 10px;
+}

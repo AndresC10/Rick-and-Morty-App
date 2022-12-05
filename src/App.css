@@ -41,3 +41,9 @@
     margin-right: auto;
     margin-bottom: 2rem;
 }
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
