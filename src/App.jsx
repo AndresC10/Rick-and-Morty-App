@@ -17,12 +17,14 @@ function App() {
   useFetch(locationInput, setLocation, setHasError)
 
   useEffect(() => {
-    if (location?.residents.length / 20 > 1) {
+    if ((location?.residents.length / 20) > 1) {
       if (location?.residents.length % 20 !== 0) {
         setPages(Math.floor(((location?.residents.length / 20) + 1)))
       } else {
         setPages(Math.floor(((location?.residents.length / 20))))
       }
+    } else {
+      setPages(0)
     }
   }, [location])
 
