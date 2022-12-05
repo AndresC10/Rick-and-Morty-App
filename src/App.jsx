@@ -17,6 +17,10 @@ function App() {
   useFetch(locationInput, setLocation, setHasError)
 
   useEffect(() => {
+    setPageRequested(1)
+  }, [locationInput])
+
+  useEffect(() => {
     if ((location?.residents.length / 20) > 1) {
       if (location?.residents.length % 20 !== 0) {
         setPages(Math.floor(((location?.residents.length / 20) + 1)))
@@ -33,7 +37,7 @@ function App() {
     let lastValue = (pageRequested * 20)
     setResidentsArr(location?.residents.slice(firstValue, lastValue))
     console.log(residentsArr)
-  }, [location, pageRequested])
+  }, [location, pageRequested, locationInput])
 
   console.log(residentsArr)
   console.log(pageRequested)
@@ -43,6 +47,7 @@ function App() {
         <Search
           setLocationInput={setLocationInput}
           hasError={hasError}
+          setPageRequested={setPageRequested}
         />
       </div>
       <div>
