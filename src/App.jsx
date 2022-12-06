@@ -36,11 +36,8 @@ function App() {
     let firstValue = (pageRequested - 1) * 20
     let lastValue = (pageRequested * 20)
     setResidentsArr(location?.residents.slice(firstValue, lastValue))
-    console.log(residentsArr)
   }, [location, pageRequested, locationInput])
 
-  console.log(residentsArr)
-  console.log(pageRequested)
   return (
     <div className="App">
       <div className='home-container'>
@@ -60,12 +57,17 @@ function App() {
           ))
         }
       </div>
-      <div className='page-container'>
-        <Page
-          pages={pages}
-          setPageRequested={setPageRequested}
-        />
-      </div>
+      {
+        pages ?
+          <div className='page-container'>
+            <Page
+              pages={pages}
+              setPageRequested={setPageRequested}
+            />
+          </div> :
+          <></>
+      }
+
     </div>
   )
 }
