@@ -9,7 +9,6 @@ const Page = ({ pages, setPageRequested }) => {
 
     const handleClick = e => {
         setPageRequested(e.target.value)
-        console.log(e.target.value)
     }
     return (
         <div className='btn-container'>

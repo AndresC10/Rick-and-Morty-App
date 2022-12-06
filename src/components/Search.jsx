@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Autosuggest from 'react-autosuggest'
 import './styles/Search.css'
 
-const Search = ({ setLocationInput, hasError, setPageRequested }) => {
+const Search = ({ setLocationInput, hasError }) => {
     const [data, setData] = useState()
     const [sgLocations, setSgLocations] = useState([])
     const [value, setValue] = useState('')
